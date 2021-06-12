@@ -1,10 +1,10 @@
 export interface IStatus {
-  state: string;
+  state: StatusState;
   updated: string;
 }
 
-// enum StatusState {
-//   Pending = 0,
-//   Success,
-//   Failure
-// }
+enum StatusState {
+  Pending = 0,
+  Success,
+  Failure
+}

@@ -1,18 +1,16 @@
-// export enum StatusState {
-//   Progress = 0,
-//   Success,
-//   Failure
-// }
+export enum StatusState {
+  Progress = 0,
+  Success,
+  Failure
+}
 
 export interface IChallenge {
   id: number;
-  state: string;
+  state: StatusState;
   startDate: string;
-  tasksOrder: string;
+  tasksOrder: Set<string>;
   tasksStatus: string;
-  achievementsStatus: string;
+  achievementsStatus: Map<number, string>;
 }
 
-export type startNewChallengeType = {
-  (id: number): IChallenge,
-};
+export type startNewChallengeType = (id: number) => IChallenge;
