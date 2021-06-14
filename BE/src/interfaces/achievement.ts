@@ -7,6 +7,4 @@ export interface IAchievement {
   checkComplete(s: IStatus): IStatus;
 }
 
-export type getTaskArchiveType = {
-  (id: number): IAchievement[],
-};
+export type getTaskArchiveType = (id: number) => IAchievement[];
