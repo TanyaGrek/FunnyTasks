@@ -3,6 +3,7 @@ build
 coverage
 
 dist/
+./dist/
 node_modules/
 .idea/
 .husky/
