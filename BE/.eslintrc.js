@@ -14,5 +14,14 @@ module.exports = {
     'plugin:unicorn/recommended',
     'prettier',
   ],
-  rules: {},
+  rules: {
+    'unicorn/filename-case': [
+      'error',
+      {
+        cases: {
+          camelCase: true,
+        },
+      },
+    ],
+  },
 };

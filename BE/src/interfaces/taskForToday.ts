@@ -6,6 +6,4 @@ export interface ITaskForToday {
   status: IStatus;
 }
 
-export type getTaskForTodayType = {
-  (id: number): ITaskForToday,
-};
+export type getTaskForTodayType = (id: number) => ITaskForToday;

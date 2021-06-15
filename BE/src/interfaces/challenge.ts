@@ -1,18 +1,23 @@
-// export enum StatusState {
-//   Progress = 0,
-//   Success,
-//   Failure
-// }
+import { ITask } from './task';
+
+export enum StatusState {
+  InProgress = 0,
+  Success,
+  Failure
+}
 
 export interface IChallenge {
   id: number;
-  state: string;
+  state: StatusState;
   startDate: string;
-  tasksOrder: string;
-  tasksStatus: string;
-  achievementsStatus: string;
+  tasksOrder: Set<string>;
+  tasksStatus: Map<number, string>;
+  achievementsStatus: Map<number, string>;
 }
 
-export type startNewChallengeType = {
-  (id: number): IChallenge,
-};
+export type startNewChallengeType = (
+  taskList: ITask[],
+  challengeList: IChallenge[],
+  challengeDuration: number,
+  achievementAmount: number
+) => IChallenge;
