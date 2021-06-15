@@ -3,7 +3,7 @@ export interface IStatus {
   updated: string;
 }
 
-enum StatusState {
+export enum StatusState {
   Pending = 0,
   Success,
   Failure

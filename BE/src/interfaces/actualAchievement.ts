@@ -8,10 +8,6 @@ export interface IActualAchievement {
   status: IStatus;
 }
 
-export type getActualAchievementsType = {
-  (id: number): IActualAchievement[],
-};
+export type getActualAchievementsType = (id: number) => IActualAchievement[];
 
-export type calculateAchievementsStatus = {
-  (id: number): IAchievement[],
-};
+export type calculateAchievementsStatus = (id: number) => IAchievement[];
