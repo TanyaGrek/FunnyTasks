@@ -1,8 +1,8 @@
 import { Router } from 'express';
-import { getTasks } from './task.controller';
+import { getTaskForTodayByChallengeId } from './task.controller';
 
 const router = Router();
 
-router.get('/tasks', getTasks);
+router.get('/tasks/:challengeId/taskForToday', getTaskForTodayByChallengeId);
 
 export { router as taskRouter };

@@ -45,7 +45,6 @@ export const startNewChallenge: startNewChallengeType = (taskList, challengeList
 };
 
 export const updateTaskStatus = (data: any) => {
-  // const challenge = getChallengeById(data.challengeId);
 
   console.log(data);
   io.on('connection', async (socket) => {

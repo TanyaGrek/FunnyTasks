@@ -30,11 +30,14 @@ io.on('connection', (socket) => {
   })
 });
 
-schedule.scheduleJob('00 00 * * *', function(){
-  console.log(new Date());
-  console.log('The answer to life, the universe, and everything!');
-});
-
+schedule.scheduleJob('00 00 * * *',
+  async () => {
+    io.sockets.on('task status', (data: any) => {
+      updateTaskStatus(data);
+      manageTaskStatus(data);
+      calculateAchievements(data.challengeId);
+    });
+  });
 
 
 app.use(express.json());

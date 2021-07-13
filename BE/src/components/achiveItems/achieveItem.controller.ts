@@ -6,7 +6,6 @@ export const getAchieveItem = (request: Request, response: Response) => {
   };
 
   const { id } = request.params;
-  console.log(id);
 
   try {
     response.json(body);
